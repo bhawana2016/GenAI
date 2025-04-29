@@ -1,0 +1,124 @@
+1. Objective:
+Create a local, private AI system that tracks user work efforts (across Git commits, emails, Slack discussions) and automatically generates a weekly report matched against a simple list of assigned tasks.
+
+
+Features:
+	• Task list input (tasks.csv)
+	• Auto-fetch sub-steps like:
+		○ Git commits
+		○ Email threads
+		○ Slack channel discussions
+	• AI Matching: Automatically link activities (commits, emails, messages) to tasks.
+	• Streamlit Dashboard: View progress visually.
+	• Weekly Report: Generate Markdown (later optional PDF).
+
+2. Basic Architecture:
+open_source_tracker/
+├── app.py                # Streamlit app
+├── input/
+│   ├── tasks.csv         # Task list
+│   ├── git_logs.txt      # Git logs
+│   ├── emails/           # Outlook .eml files
+│   ├── slack_exports/    # Slack JSON exports
+├── fetchers/
+│   ├── git_parser.py
+│   ├── email_parser.py
+│   ├── slack_parser.py
+├── matcher/
+│   ├── ai_matcher.py
+├── reporter/
+│   ├── report_generator.py
+├── README.md
+└── requirements.txt
+
+3. Key Technologies:
+Purpose	        Tool
+Dashboard	Streamlit
+NLP Matching	TF-IDF, Sentence Transformers
+Email Parsing	Python email library
+Slack Parsing	JSON Parsing
+Git Parsing	CLI + Python parsing
+Report Generation	Markdown, PDF (later)
+
+4. User Inputs and Assumptions:
+	• Upload task list (tasks.csv) manually.
+	• Run git log manually to generate text file.
+	• Export Outlook emails manually to .eml.
+	• Export Slack messages manually (or simulated samples).
+
+5. Strengths for Interviews:
+Real-world messy data handling	✅
+NLP skills: matching text to tasks	✅
+Automation pipelines	✅
+Dashboarding and visualization	✅
+Productivity and AI integration	✅
+Scalable and modular design	✅
+
+6. Other Kickass Project Ideas
+
+🧠 Idea 1: Autonomous Meeting Summarizer + Action Tracker
+(Project Code: AutoMeetScribe)
+Goal:
+	• Automatically summarize meeting recordings and extract action items.
+	• Assign tasks and reminders through Slack or Email.
+Technologies:
+	• Audio-to-Text: Whisper, AssemblyAI
+	• Summarization: T5, Pegasus, BART
+	• Action Detection: NER, Sentence Classification
+	• Frontend: Streamlit
+	• Notifications: Slack Bot or SMTP Email
+Why Unique:
+	• Zoom's built-in features are basic, expensive, and not private.
+	• This system will be customizable, private, and extensible.
+
+🧠 Idea 2: Personal Research Paper Assistant
+(Project Code: ScholarLens)
+Goal:
+	• Upload PDFs of research papers.
+	• Summarize important sections.
+	• Suggest 3–5 related papers.
+Technologies:
+	• PDF Extraction: PyMuPDF, pdfminer
+	• Summarization: Transformers
+	• Semantic Search: FAISS, ChromaDB
+	• Frontend: Streamlit
+Why Unique:
+	• Helps researchers save hours.
+	• Combines NLP, Retrieval Augmented Generation, and dashboarding.
+
+🧠 Idea 3: AI-Driven Debugging Assistant
+(Project Code: BugScopeAI)
+Goal:
+	• Parse logs, stack traces.
+	• Suggest likely root causes.
+	• Offer fixes based on previous cases.
+Technologies:
+	• Log Parsing: regex + ML
+	• Root Cause Classification: Custom LLMs
+	• Vector Search: Past incidents database
+	• Frontend: Streamlit
+Why Unique:
+	• Helps developers debug faster.
+	• Shows deep systems thinking and MLOps knowledge.
+
+7. Bonus Fourth Idea:
+🧠 Task Complexity Estimator for Project Managers
+(Predict effort needed from task descriptions.)
+
+8. Why These Projects Are High-Impact
+Skill	Demonstrated By
+Data Preprocessing	All projects
+NLP Engineering	Summarizer, Research Assistant, BugScopeAI
+ML Modeling	Task Estimator, Root Cause Analyzer
+Real-world Use Case	Tracker, Summarizer, Debugging
+Dashboarding	Streamlit apps for all
+Automation	Reminders, reports, alerts
+
+9. Immediate Next Steps Suggested
+	• Build the MVP for the Effort Tracker project (open source Streamlit version).
+	• Then optionally pick one side project among:
+		○ AutoMeetScribe (Meeting Summarizer)
+		○ ScholarLens (Research Assistant)
+		○ BugScopeAI (Debugging Assistant)
+	• Create GitHub repos with strong READMEs.
+	• Add them to your portfolio/resume with a clear "Problem → Solution → Results" format.
