@@ -1,7 +1,6 @@
 1. Objective:
 Create a local, private AI system that tracks user work efforts (across Git commits, emails, Slack discussions) and automatically generates a weekly report matched against a simple list of assigned tasks.
 
-
 Features:
 	• Task list input (tasks.csv)
 	• Auto-fetch sub-steps like:
@@ -47,12 +46,12 @@ Report Generation	Markdown, PDF (later)
 	• Export Slack messages manually (or simulated samples).
 
 5. Strengths for Interviews:
-Real-world messy data handling	✅
-NLP skills: matching text to tasks	✅
-Automation pipelines	✅
-Dashboarding and visualization	✅
-Productivity and AI integration	✅
-Scalable and modular design	✅
+Real-world messy data handling
+NLP skills: matching text to tasks
+Automation pipelines
+Dashboarding and visualization
+Productivity and AI integration
+Scalable and modular design
 
 6. Other Kickass Project Ideas
 
